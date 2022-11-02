@@ -1,3 +1,6 @@
 [submodule "secret_devtools"]
 	path = secret_devtools
 	url = https://github.com/sskrolkina/secret_devtools
+[submodule "DEV"]
+	path = DEV
+	url = https://github.com/sskrolkina/DEV
