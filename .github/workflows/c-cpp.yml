@@ -1,0 +1,11 @@
+name: Test
+
+on: pull_request
+
+jobs:
+  agag:
+    runs-on: ubuntu-latest
+    steps:
+    - name: OOOO
+      run: echo "HAHAHAHAHAHA"
+
