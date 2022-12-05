@@ -1,11 +1,20 @@
-name: Test
+name: Super-Linter
 
-on: pull_request
+on: push
 
 jobs:
-  agag:
+  build:
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
-    - name: OOOO
-      run: echo "HAHAHAHAHAHA"
-
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
